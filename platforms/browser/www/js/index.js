@@ -5,7 +5,6 @@ var app = {
         this.bindEvents();
     },
 
-// testa se o celular esta ligado
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
@@ -13,7 +12,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
     },
-    // Update DOM on a Received Event
+
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');

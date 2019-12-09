@@ -1,58 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <title>Agenda</title>
-
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <title>Agenda Telefonica</title>
 </head>
-<body>    <!-- comentario-->
+
+<body>
   <script type="text/javascript" src="js/index.js"></script>
-  <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="js/agenda.js"></script>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="js/agenda.js"></script>
+  <input type="hidden" id="agenda_id_delete">
 
-  <!-- estrutura do container-->
+	<div class="container" align="center">
+		<h2>Agenda Telefônica</h2>
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Nome</h4>
+				<input type="text" class="form-control" id="agenda_nome">
+				<br>
+				<h4>Telefone</h4>
+				<input type="text" class="form-control" id="agenda_telefone">
+				<br>
+				<br>
+				<input type="button" class="btn btn-lg btn-primary form-control" value="Incluir" onclick="agenda_insert();"><br><br>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table">
+					<thead>
+						<th>Nome</th>
+						<th>Telefone</th>
+						<th>Ações</th>
+						<tr>
 
-  <div class="container" align="center">
-    <h2>Agenda telefônica</h2>
-  <div class="row" >
-    <div class="col-md-12" >
-      <h4>Nome</h4>
-      <input type="text" class="form-control" id="agenda_nome">
-      <br>
-      <h4>Telefone</h4>
-      <input type="text" class="form-control" id="agenda_telefone">
-      <br>
-      <br>
-      <input type="button" class="btn btn-lg btn-primary form-control" value="Incluir" onclick="agenda_insert();"><br><br>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-12">
-
-<!-- tabela da agenda para armazenar os dados-->
-  <table class="table">
-
-    <thead>
-      <tr></tr>
-        </thead>
-
-        <tbody id="agenda_listagem"></tbody>
-
-      </table>
-
-    </div>
-  </div>
-</div>
-
-  <script>agenda_view();</script>
-
+						</tr>
+					</thead>
+					<tbody id = "agenda_listagem"></tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+    <script>
+		agenda_view();
+	</script>
 </body>
 
 </html>
